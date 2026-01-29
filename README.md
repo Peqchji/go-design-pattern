@@ -18,7 +18,23 @@ The implementations here prioritize:
 
 ---
 
-## 📂 Patterns Included
-* **Creational:** Singleton, Factory, Builder, Prototype.
-* **Structural:** Adapter, Bridge, Composite, Decorator, Facade.
-* **Behavioral:** Strategy, Observer, Command, State, Template Method.
+## 📂 Patterns Will Be Learned
+### Creational
+- [x] Singleton
+- [ ] Factory
+- [ ] Builder
+- [ ] Prototype
+
+### Structural
+- [ ] Adapter
+- [ ] Bridge
+- [ ] Composite
+- [x] Decorator
+- [ ] Facade
+
+### Behavioral
+- [x] Strategy
+- [ ] Observer
+- [ ] Command
+- [ ] State
+- [ ] Template Method
