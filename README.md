@@ -13,7 +13,6 @@ This repository is part of a deliberate practicing strategy where **AI is used a
 ## 🏗️ Core Principles
 The implementations here prioritize:
 * **SOLID Principles:** Decoupling logic for maximum testability.
-* **Concurrency Patterns:** Utilizing Go’s unique primitives (channels/goroutines) within classic patterns.
 * **Maintainability:** Writing code that is as easy to read as it is to execute.
 
 ---
