@@ -1,8 +1,8 @@
 package middleware_test
 
 import (
-	"design_pattern/decorator/middleware"
-	"design_pattern/internal/result"
+	"design_pattern/pkg/result"
+	"design_pattern/structural/decorator/middleware"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -11,19 +11,19 @@ import (
 )
 
 type StatusRecorderTestcase struct {
-	name 	 string
-	capture    int
+	name     string
+	capture  int
 	expected result.Result[int]
 }
 
 func TestStatusRecorder_CapturesCode(t *testing.T) {
 	table := []StatusRecorderTestcase{
 		{
-			name: "Capture status 200",
+			name:    "Capture status 200",
 			capture: http.StatusOK,
 			expected: result.Result[int]{
 				Result: http.StatusOK,
-				Error: nil,
+				Error:  nil,
 			},
 		},
 	}
@@ -32,7 +32,7 @@ func TestStatusRecorder_CapturesCode(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			dummyWriter := httptest.NewRecorder()
 			s := middleware.NewStatusRecorder(
-				dummyWriter, 
+				dummyWriter,
 				tc.capture,
 			)
 

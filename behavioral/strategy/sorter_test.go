@@ -1,8 +1,8 @@
 package strategy_test
 
 import (
-	"design_pattern/internal/result"
-	"design_pattern/strategy/sorter"
+	"design_pattern/pkg/result"
+	"design_pattern/behavioral/strategy/sorter"
 	"math/rand"
 	"testing"
 

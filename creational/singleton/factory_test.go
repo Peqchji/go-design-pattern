@@ -1,7 +1,7 @@
 package singleton_test
 
 import (
-	"design_pattern/singleton/fraud"
+	"design_pattern/creational/singleton/fraud"
 	"fmt"
 	"sync"
 	"testing"
