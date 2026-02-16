@@ -20,7 +20,7 @@ The implementations here prioritize:
 ## 📂 Patterns Will Be Learned
 ### Creational
 - [x] Singleton
-- [ ] Factory
+- [x] Factory
 - [ ] Builder
 - [ ] Prototype
 
