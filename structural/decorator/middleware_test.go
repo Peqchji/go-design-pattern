@@ -1,7 +1,7 @@
 package middleware_test
 
 import (
-	"design_pattern/pkg/result"
+	"design_pattern/pkg"
 	"design_pattern/structural/decorator/middleware"
 	"net/http"
 	"net/http/httptest"
@@ -13,7 +13,7 @@ import (
 type StatusRecorderTestcase struct {
 	name     string
 	capture  int
-	expected result.Result[int]
+	expected pkg.Result[int]
 }
 
 func TestStatusRecorder_CapturesCode(t *testing.T) {
@@ -21,7 +21,7 @@ func TestStatusRecorder_CapturesCode(t *testing.T) {
 		{
 			name:    "Capture status 200",
 			capture: http.StatusOK,
-			expected: result.Result[int]{
+			expected: pkg.Result[int]{
 				Result: http.StatusOK,
 				Error:  nil,
 			},

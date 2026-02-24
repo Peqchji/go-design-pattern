@@ -1,4 +1,4 @@
-package result
+package pkg
 
 type Result[T any] struct {
 	Result T

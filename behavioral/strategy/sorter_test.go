@@ -1,7 +1,7 @@
 package strategy_test
 
 import (
-	"design_pattern/pkg/result"
+	"design_pattern/pkg"
 	"design_pattern/behavioral/strategy/sorter"
 	"math/rand"
 	"testing"
@@ -12,7 +12,7 @@ import (
 type TestAdaptiveSorterTestcase struct {
 	name     string
 	input    []int
-	expected result.Result[[]int]
+	expected pkg.Result[[]int]
 }
 
 func TestAdaptiveSorter(t *testing.T) {
@@ -20,7 +20,7 @@ func TestAdaptiveSorter(t *testing.T) {
 		{
 			name:  "Should sorting unsorted input",
 			input: []int{-1, 2, 3, 2, 3, 4, 10, 1, 9},
-			expected: result.Result[[]int]{
+			expected: pkg.Result[[]int]{
 				Result: []int{-1, 1, 2, 2, 3, 3, 4, 9, 10},
 				Error:  nil,
 			},
@@ -28,7 +28,7 @@ func TestAdaptiveSorter(t *testing.T) {
 		{
 			name:  "Should sorting sorted input",
 			input: []int{1, 1, 2, 2, 3, 3, 4, 9, 10},
-			expected: result.Result[[]int]{
+			expected: pkg.Result[[]int]{
 				Result: []int{1, 1, 2, 2, 3, 3, 4, 9, 10},
 				Error:  nil,
 			},
@@ -36,7 +36,7 @@ func TestAdaptiveSorter(t *testing.T) {
 		{
 			name:  "Should return empty slices",
 			input: []int{},
-			expected: result.Result[[]int]{
+			expected: pkg.Result[[]int]{
 				Result: []int{},
 				Error:  nil,
 			},

@@ -2,7 +2,7 @@ package factory
 
 import (
 	"design_pattern/creational/factory/gunfactory"
-	"design_pattern/pkg/result"
+	"design_pattern/pkg"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -11,7 +11,7 @@ import (
 type GunFactoryTestCase struct {
 	name     string
 	gunType  gunfactory.GunType
-	expected result.Result[gunfactory.Gun]
+	expected pkg.Result[gunfactory.Gun]
 }
 
 func TestGunFactory(t *testing.T) {
@@ -20,7 +20,7 @@ func TestGunFactory(t *testing.T) {
 		{
 			name: "Should create AK47",
 			gunType: gunfactory.GunTypeAK47,
-			expected: result.Result[gunfactory.Gun]{
+			expected: pkg.Result[gunfactory.Gun]{
 				Result: &gunfactory.AK47{},
 				Error:  nil,
 			},
@@ -28,7 +28,7 @@ func TestGunFactory(t *testing.T) {
 		{
 			name: "Should create M16",
 			gunType: gunfactory.GunTypeM16,
-			expected: result.Result[gunfactory.Gun]{
+			expected: pkg.Result[gunfactory.Gun]{
 				Result: &gunfactory.M16{},
 				Error:  nil,
 			},
@@ -36,7 +36,7 @@ func TestGunFactory(t *testing.T) {
 		{
 			name: "Should create G36",
 			gunType: gunfactory.GunTypeG36,
-			expected: result.Result[gunfactory.Gun]{
+			expected: pkg.Result[gunfactory.Gun]{
 				Result: &gunfactory.G36{},
 				Error:  nil,
 			},
@@ -44,7 +44,7 @@ func TestGunFactory(t *testing.T) {
 		{
 			name: "Should create Glock",
 			gunType: gunfactory.GunTypeGlock,
-			expected: result.Result[gunfactory.Gun]{
+			expected: pkg.Result[gunfactory.Gun]{
 				Result: &gunfactory.Glock{},
 				Error:  nil,
 			},
@@ -52,7 +52,7 @@ func TestGunFactory(t *testing.T) {
 		{
 			name: "Should return error for invalid gun type",
 			gunType: gunfactory.GunType("Invalid Gun Type"),
-			expected: result.Result[gunfactory.Gun]{
+			expected: pkg.Result[gunfactory.Gun]{
 				Result: nil,
 				Error:  gunfactory.ErrInvalidGunType,
 			},
