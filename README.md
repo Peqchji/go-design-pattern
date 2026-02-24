@@ -29,11 +29,11 @@ The implementations here prioritize:
 - [ ] Bridge
 - [ ] Composite
 - [x] Decorator
-- [ ] Facade
+- [x] Facade
 
 ### Behavioral
 - [x] Strategy
-- [ ] Observer
-- [ ] Command
+- [x] Observer
+- [x] Command
 - [ ] State
 - [ ] Template Method
