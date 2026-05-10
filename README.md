@@ -35,5 +35,5 @@ The implementations here prioritize:
 - [x] Strategy
 - [x] Observer
 - [x] Command
-- [ ] State
+- [x] State
 - [ ] Template Method
