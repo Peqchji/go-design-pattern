@@ -21,7 +21,7 @@ The implementations here prioritize:
 ### Creational
 - [x] Singleton
 - [x] Factory
-- [ ] Builder
+- [x] Builder and Option
 - [ ] Prototype
 
 ### Structural
